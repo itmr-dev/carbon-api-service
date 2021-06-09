@@ -39,3 +39,5 @@ app.get('/getCodeImage', async (req, res) => {
 
   return res.status(200).send(image);
 });
+
+app.listen(process.env.PORT);
