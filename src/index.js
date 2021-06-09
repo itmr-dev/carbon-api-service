@@ -8,8 +8,9 @@ app.get('/getCodeImage', async (req, res) => {
 
   const { code } = req.query;
 
-  const url = `https://carbon.now.sh/?bg=rgba%2844%2C47%2C51%2C1%29&t=one-dark&wt=none&l=auto&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=${code}`;
+  // const url = `https://carbon.now.sh/?bg=rgba%2844%2C47%2C51%2C1%29&t=one-dark&wt=none&l=auto&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=${code}`;
   // const url = `https://carbon.now.sh?bg=rgba(255%2C255%2C255%2C0)&code=${escape(message.content)}`;
+  const url = `https://carbon.now.sh?bg=rgba%2844%2C47%2C51%2C1%29&t=one-dark&pv=0px&ph=0px&ds=false&code=${escape(code)}`;
   // const url = `https://carbon.now.sh?bg=rgba(44%2C47%2C51%2C1)&code=${escape(message.content)}`;
   const timeout = 2000;
   const browser = await puppeteer.launch({
