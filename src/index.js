@@ -41,3 +41,4 @@ app.get('/getCodeImage', async (req, res) => {
 });
 
 app.listen(process.env.PORT);
+console.log(`webserver started on ${process.env.PORT}`);
