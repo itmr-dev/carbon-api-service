@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 const app = express();
 
 app.get('/getCodeImage', async (req, res) => {
-  if (req.headers.authorization !== process.env.TOKEN) return res.status(401).send();
+  if (req.headers.authorization !== `Bearer ${process.env.TOKEN}`) return res.status(401).send();
 
   const { code } = req.query;
 
