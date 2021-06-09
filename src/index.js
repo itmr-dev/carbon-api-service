@@ -37,6 +37,9 @@ app.get('/getCodeImage', async (req, res) => {
   await page.waitFor(timeout);
   await browser.close();
 
+  await res.contentType('image/png');
+  // await res.send(Buffer.from(image, 'binary'));
+
   return res.status(200).send(image);
 });
 
